@@ -1,6 +1,6 @@
 package bowling.step2.domain;
 
-import bowling.step2.domain.pitchresult.PitchResultGroup;
+import bowling.step2.outputview.pitchresult.PitchResultGroup;
 import bowling.step2.domain.visitor.FrameVisitor;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package bowling.step2.domain.pitchresult;
+package bowling.step2.outputview.pitchresult;
 
 import bowling.step2.domain.Frame;
 import bowling.step2.domain.state.Gutter;
