@@ -2,7 +2,7 @@ package bowling.step2.domain.state;
 
 import bowling.step2.outputview.pitchresult.PitchPrinter;
 
-public class Gutter implements PitchStatus{
+public class Gutter implements PitchStatus {
 
     private final int count;
 
