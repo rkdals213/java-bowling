@@ -1,6 +1,7 @@
 package bowling.step2.outputview.pitchresult;
 
 import bowling.step2.domain.Frame;
+import bowling.step2.domain.result.PitchResultGroup;
 
 public class FrameResult {
     private final PitchResultGroup pitchResultGroup;

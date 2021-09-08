@@ -1,8 +1,22 @@
 package bowling.step2.domain.state;
 
-public class Miss implements PitchStatus{
-    @Override
-    public String result(int count) {
-        return String.valueOf(count);
+import bowling.step2.outputview.pitchresult.PitchPrinter;
+
+public class Miss implements PitchStatus {
+
+    private final int count;
+
+    public Miss(int count) {
+        this.count = count;
     }
+
+    public int count() {
+        return this.count;
+    }
+
+    @Override
+    public String result(PitchPrinter printer) {
+        return printer.print(this);
+    }
+
 }

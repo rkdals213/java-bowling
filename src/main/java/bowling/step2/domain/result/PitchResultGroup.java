@@ -1,4 +1,4 @@
-package bowling.step2.outputview.pitchresult;
+package bowling.step2.domain.result;
 
 public interface PitchResultGroup {
     String getPitchResults();

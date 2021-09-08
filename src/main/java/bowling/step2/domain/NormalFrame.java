@@ -1,7 +1,7 @@
 package bowling.step2.domain;
 
-import bowling.step2.outputview.pitchresult.NormalFramePitchResultGroup;
-import bowling.step2.outputview.pitchresult.PitchResultGroup;
+import bowling.step2.domain.result.NormalFramePitchResultGroup;
+import bowling.step2.domain.result.PitchResultGroup;
 import bowling.step2.domain.visitor.FrameVisitor;
 
 import java.util.List;

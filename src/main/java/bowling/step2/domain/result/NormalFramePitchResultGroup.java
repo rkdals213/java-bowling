@@ -1,4 +1,4 @@
-package bowling.step2.outputview.pitchresult;
+package bowling.step2.domain.result;
 
 import bowling.step2.domain.Frame;
 import bowling.step2.domain.state.Gutter;
@@ -38,7 +38,7 @@ public class NormalFramePitchResultGroup implements PitchResultGroup {
 
     private static PitchResult makeFirstResult(int count) {
         if (count == 10) {
-            return PitchResult.of(new Strike(), count);
+            return PitchResult.of(new Strike(count));
         }
 
         return getPitchResult(count);
@@ -46,7 +46,7 @@ public class NormalFramePitchResultGroup implements PitchResultGroup {
 
     private static PitchResult makeSecondResult(int prevCount, int count) {
         if (prevCount + count == 10) {
-            return PitchResult.of(new Spare(), count);
+            return PitchResult.of(new Spare(count));
         }
 
         return getPitchResult(count);
@@ -54,10 +54,10 @@ public class NormalFramePitchResultGroup implements PitchResultGroup {
 
     private static PitchResult getPitchResult(int count) {
         if (count == 0) {
-            return PitchResult.of(new Gutter(), count);
+            return PitchResult.of(new Gutter(count));
         }
 
-        return PitchResult.of(new Miss(), count);
+        return PitchResult.of(new Miss(count));
     }
 
     public String getPitchResults() {
