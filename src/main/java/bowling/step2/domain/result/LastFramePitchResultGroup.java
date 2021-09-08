@@ -19,23 +19,23 @@ public class LastFramePitchResultGroup implements PitchResultGroup {
 
     public static LastFramePitchResultGroup of(Frame frame) {
         List<Integer> current = frame.current();
-        List<PitchResult> temp = new ArrayList<>();
+        List<PitchResult> results = new ArrayList<>();
 
-        temp.add(makeFirstResult(current.get(0)));
+        results.add(makeFirstResult(current.get(0)));
 
         if (pitchedOnlyOnce(current)) {
-            return new LastFramePitchResultGroup(temp);
+            return new LastFramePitchResultGroup(results);
         }
 
-        temp.add(makeSecondResult(current.get(0), current.get(1)));
+        results.add(makeSecondResult(current.get(0), current.get(1)));
 
         if (pitchedJustTwice(current)) {
-            return new LastFramePitchResultGroup(temp);
+            return new LastFramePitchResultGroup(results);
         }
 
-        temp.add(makeSecondResult(current.get(1), current.get(2)));
+        results.add(makeSecondResult(current.get(1), current.get(2)));
 
-        return new LastFramePitchResultGroup(temp);
+        return new LastFramePitchResultGroup(results);
     }
 
     private static boolean pitchedOnlyOnce(List<Integer> current) {
